@@ -1,0 +1,152 @@
+# containerd Project Governance
+
+As a CNCF member project, we abide by the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
+We are also a member of the Moby Project, and abide by the technical dispute resolution
+criteria handled via the [Moby Technical Steering Committee](https://github.com/moby/tsc).
+
+For specific guidance on practical contribution steps for any containerd sub-project please
+see our [CONTRIBUTING.md](./CONTRIBUTING.md) guide.
+
+## Maintainership
+
+There are different types of maintainers, with different responsibilities, but
+all maintainers have 3 things in common:
+
+1) They share responsibility in the project's success.
+2) They have made a long-term, recurring time investment to improve the project.
+3) They spend that time doing whatever needs to be done, not necessarily what
+is the most interesting or fun.
+
+Maintainers are often under-appreciated, because their work is harder to appreciate.
+It's easy to appreciate a really cool and technically advanced feature. It's harder
+to appreciate the absence of bugs, the slow but steady improvement in stability,
+or the reliability of a release process. But those things distinguish a good
+project from a great one.
+
+## Reviewers
+
+A reviewer is a core role within the project.
+They share in reviewing issues and pull requests and their LGTM counts towards the
+required LGTM count to merge a code change into the project.
+
+Reviewers are part of the organization but do not have write access.
+Becoming a reviewer is a core aspect in the journey to becoming a maintainer.
+
+## Adding maintainers
+
+Maintainers are first and foremost contributors that have shown they are
+committed to the long term success of a project. Contributors wanting to become
+maintainers are expected to be deeply involved in contributing code, pull
+request review, and triage of issues in the project for more than three months.
+
+Just contributing does not make you a maintainer, it is about building trust
+with the current maintainers of the project and being a person that they can
+depend on and trust to make decisions in the best interest of the project.
+
+Periodically, the existing maintainers curate a list of contributors that have
+shown regular activity on the project over the prior months. From this list,
+maintainer candidates are selected and proposed on the maintainers mailing list.
+
+After a candidate has been announced on the maintainers mailing list, the
+existing maintainers are given five business days to discuss the candidate,
+raise objections and cast their vote. Candidates must be approved by at least
+66% of the current maintainers by adding their vote on the mailing
+list. Only maintainers of the repository that the candidate is proposed for are
+allowed to vote.
+
+If a candidate is approved, a maintainer will contact the candidate to invite
+the candidate to open a pull request that adds the contributor to the
+MAINTAINERS file. The candidate becomes a maintainer once the pull request is
+merged.
+
+## Adding sub-projects
+
+Similar to adding maintainers, new sub projects can be added to containerd
+GitHub organization as long as they adhere to the CNCF
+[charter](https://www.cncf.io/about/charter/) and mission. After a project
+proposal has been announced on a public forum (GitHub issue or mailing list),
+the existing maintainers are  given five business days to discuss the new
+project, raise objections and cast their vote. Projects must be approved by at
+least 66% of the current maintainers by adding their vote.
+
+If a project is approved, a maintainer will add the project to the containerd
+GitHub organization, and make an announcement on a public forum.
+
+## Stepping down policy
+
+Life priorities, interests, and passions can change. If you're a maintainer but
+feel you must remove yourself from the list, inform other maintainers that you
+intend to step down, and if possible, help find someone to pick up your work.
+At the very least, ensure your work can be continued where you left off.
+
+After you've informed other maintainers, create a pull request to remove
+yourself from the MAINTAINERS file.
+
+## Removal of inactive maintainers
+
+Similar to the procedure for adding new maintainers, existing maintainers can
+be removed from the list if they do not show significant activity on the
+project. Periodically, the maintainers review the list of maintainers and their
+activity over the last three months.
+
+If a maintainer has shown insufficient activity over this period, a neutral
+person will contact the maintainer to ask if they want to continue being
+a maintainer. If the maintainer decides to step down as a maintainer, they
+open a pull request to be removed from the MAINTAINERS file.
+
+If the maintainer wants to remain a maintainer, but is unable to perform the
+required duties they can be removed with a vote of at least 66% of
+the current maintainers. An e-mail is sent to the
+mailing list, inviting maintainers of the project to vote. The voting period is
+five business days. Issues related to a maintainer's performance should be
+discussed with them among the other maintainers so that they are not surprised
+by a pull request removing them.
+
+## How are decisions made?
+
+containerd is an open-source project with an open design philosophy. This means
+that the repository is the source of truth for EVERY aspect of the project,
+including its philosophy, design, road map, and APIs. *If it's part of the
+project, it's in the repo. If it's in the repo, it's part of the project.*
+
+As a result, all decisions can be expressed as changes to the repository. An
+implementation change is a change to the source code. An API change is a change
+to the API specification. A philosophy change is a change to the philosophy
+manifesto, and so on.
+
+All decisions affecting containerd, big and small, follow the same 3 steps:
+
+* Step 1: Open a pull request. Anyone can do this.
+
+* Step 2: Discuss the pull request. Anyone can do this.
+
+* Step 3: Merge or refuse the pull request. Who does this depends on the nature
+of the pull request and which areas of the project it affects.
+
+## Helping contributors with the DCO
+
+The [DCO or `Sign your work`](./CONTRIBUTING.md#sign-your-work)
+requirement is not intended as a roadblock or speed bump.
+
+Some containerd contributors are not as familiar with `git`, or have used a web
+based editor, and thus asking them to `git commit --amend -s` is not the best
+way forward.
+
+In this case, maintainers can update the commits based on clause (c) of the DCO.
+The most trivial way for a contributor to allow the maintainer to do this, is to
+add a DCO signature in a pull requests's comment, or a maintainer can simply
+note that the change is sufficiently trivial that it does not substantially
+change the existing contribution - i.e., a spelling change.
+
+When you add someone's DCO, please also add your own to keep a log.
+
+## I'm a maintainer. Should I make pull requests too?
+
+Yes. Nobody should ever push to master directly. All changes should be
+made through a pull request.
+
+## Conflict Resolution and technical disputes
+
+containerd defers to the [Moby Technical Steering Committee](https://github.com/moby/tsc)
+for escalations and resolution on disputes for technical matters.
+
