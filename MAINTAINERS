@@ -6,10 +6,8 @@
 # GitHub ID, Name, Email address
 "AkihiroSuda","Akihiro Suda","suda.akihiro@lab.ntt.co.jp"
 "crosbymichael","Michael Crosby","crosbymichael@gmail.com"
-"dqminh","Daniel, Dao Quang Minh","dqminh89@gmail.com"
 "dmcgowan","Derek McGowan","derek@mcgstyle.net"
 "estesp","Phil Estes","estesp@gmail.com"
-"hqhq","Qiang Huang","h.huangqiang@huawei.com"
 "jhowardmsft","John Howard","jhoward@microsoft.com"
 "mlaventure","Kenfe-Mickaël Laventure","mickael.laventure@gmail.com"
 "stevvooe","Stephen Day","stevvooe@gmail.com"
@@ -21,8 +19,8 @@
 #
 # REVIEWERS 
 # GitHub ID, Name, Email address
-"dnephin","Daniel Nephin","dnephin@gmail.com"
-"jessvalarezo","Jessica Valarezo","valarezo.jessica@gmail.com"
+"dqminh","Daniel, Dao Quang Minh","dqminh89@gmail.com"
+"hqhq","Qiang Huang","h.huangqiang@huawei.com"
 "yanxuean","Xuean Yan","yan.xuean@zte.com.cn"
 "miaoyq","Yanqiang Miao","miao.yanqiang@zte.com.cn"
 "ehazlett","Evan Hazlett","ejhazlett@gmail.com"
