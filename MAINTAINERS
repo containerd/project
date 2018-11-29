@@ -1,5 +1,5 @@
 # containerd project maintainers & reviewers
-# 
+#
 # See GOVERNANCE.md for maintainer versus reviewer roles
 #
 # MAINTAINERS
@@ -17,7 +17,7 @@
 "mikebrow","Mike Brown","brownwm@us.ibm.com"
 "yujuhong","Yu-Ju Hong","yjhong@google.com"
 #
-# REVIEWERS 
+# REVIEWERS
 # GitHub ID, Name, Email address
 "dqminh","Daniel, Dao Quang Minh","dqminh89@gmail.com"
 "hqhq","Qiang Huang","h.huangqiang@huawei.com"
@@ -25,3 +25,5 @@
 "miaoyq","Yanqiang Miao","miao.yanqiang@zte.com.cn"
 "ehazlett","Evan Hazlett","ejhazlett@gmail.com"
 "jterry75","Justin Terry","juterry@microsoft.com"
+"fuweid","Wei Fu","fuweid89@gmail.com"
+"Ace-Tang","Ace Tang","aceapril@126.com"
