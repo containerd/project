@@ -1,8 +1,6 @@
 # containerd Project Governance
 
 As a CNCF member project, we abide by the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
-We are also a member of the Moby Project, and abide by the technical dispute resolution
-criteria handled via the [Moby Technical Steering Committee](https://github.com/moby/tsc).
 
 For specific guidance on practical contribution steps for any containerd sub-project please
 see our [CONTRIBUTING.md](./CONTRIBUTING.md) guide.
@@ -149,8 +147,10 @@ When you add someone's DCO, please also add your own to keep a log.
 Yes. Nobody should ever push to master directly. All changes should be
 made through a pull request.
 
-## Conflict Resolution and technical disputes
+## Conflict Resolution
 
-containerd defers to the [Moby Technical Steering Committee](https://github.com/moby/tsc)
-for escalations and resolution on disputes for technical matters.
-
+If you have a technical dispute that you feel has reached an impasse with a
+subset of the community, any contributor may open an issue, specifically
+calling for a resolution vote of the current maintainers to resolve the dispute.
+The same voting quorums required (2/3) for adding and removing maintainers
+will apply to conflict resolution.
