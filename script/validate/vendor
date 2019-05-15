@@ -14,11 +14,14 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-
 set -eu -o pipefail
 
 rm -rf vendor/
-vndr |& grep -v -i clone
+
+export GO111MODULE=on
+go mod tidy
+go mod vendor
+go mod verify
 
 DIFF_PATH="vendor/"
 DIFF=$(git status --porcelain -- "$DIFF_PATH")

@@ -1,0 +1,10 @@
+# github.com/BurntSushi/toml v0.3.1
+github.com/BurntSushi/toml
+# github.com/pkg/errors v0.8.0
+github.com/pkg/errors
+# github.com/sirupsen/logrus v1.0.0
+github.com/sirupsen/logrus
+# github.com/urfave/cli v1.20.0
+github.com/urfave/cli
+# golang.org/x/sys v0.0.0-20190514135907-3a4b5fb9f71f
+golang.org/x/sys/unix
