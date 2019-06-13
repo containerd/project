@@ -1,0 +1,23 @@
+# commit to be tagged for new release
+commit = "HEAD"
+
+project_name = "Dragonfly"
+github_repo = "dragonflyoss/Dragonfly"
+match_deps = "^github.com/(dragonflyoss/[a-zA-Z0-9-]+)$"
+
+# previous release
+previous = "v0.3.0"
+
+pre_release = false
+
+preface = """\
+This is a text preface text.
+"""
+
+supernode_image = "https://hub.docker.com/r/dragonflyoss/supernode/tags"
+df_client_image = "https://hub.docker.com/r/dragonflyoss/dfclient/tags"
+
+breaking_changes = """\
+* This is a break item 1.
+* This is a break item 2.
+"""

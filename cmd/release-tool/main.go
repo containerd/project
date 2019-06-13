@@ -18,18 +18,12 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
-	"path"
-	"path/filepath"
-	"regexp"
-	"sort"
 	"strings"
 	"text/tabwriter"
 	"text/template"
 	"unicode"
 
-	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 )
@@ -69,14 +63,17 @@ type projectRename struct {
 }
 
 type release struct {
-	ProjectName     string            `toml:"project_name"`
-	GithubRepo      string            `toml:"github_repo"`
-	Commit          string            `toml:"commit"`
-	Previous        string            `toml:"previous"`
-	PreRelease      bool              `toml:"pre_release"`
-	Preface         string            `toml:"preface"`
-	Notes           map[string]note   `toml:"notes"`
-	BreakingChanges map[string]change `toml:"breaking"`
+	ProjectName     string          `toml:"project_name"`
+	GithubRepo      string          `toml:"github_repo"`
+	Commit          string          `toml:"commit"`
+	Previous        string          `toml:"previous"`
+	PreRelease      bool            `toml:"pre_release"`
+	Preface         string          `toml:"preface"`
+	Notes           map[string]note `toml:"notes"`
+	BreakingChanges string          `toml:"breaking_changes"`
+
+	SupernodeImage string `toml:"supernode_image"`
+	DfClientImage  string `toml:"df_client_image"`
 
 	// dependency options
 	MatchDeps  string                   `toml:"match_deps"`
@@ -140,12 +137,6 @@ This tool should be ran from the root of the project repository for a new releas
 		}
 		logrus.Infof("Welcome to the %s release tool...", r.ProjectName)
 
-		mailmapPath, err := filepath.Abs(".mailmap")
-		if err != nil {
-			return errors.Wrap(err, "failed to resolve mailmap")
-		}
-		gitConfigs["mailmap.file"] = mailmapPath
-
 		var (
 			contributors   = map[contributor]int{}
 			projectChanges = []projectChange{}
@@ -169,93 +160,94 @@ This tool should be ran from the root of the project repository for a new releas
 		})
 
 		logrus.Infof("creating new release %s with %d new changes...", tag, len(changes))
-		rd, err := fileFromRev(r.Commit, vendorConf)
-		if err != nil {
-			return err
-		}
-		previous, err := getPreviousDeps(r.Previous)
-		if err != nil {
-			return err
-		}
-		deps, err := parseDependencies(rd)
-		if err != nil {
-			return err
-		}
-		renameDependencies(previous, r.RenameDeps)
-		updatedDeps := updatedDeps(previous, deps)
+		// rd, err := fileFromRev(r.Commit, vendorConf)
+		// if err != nil {
+		// 	logrus.Errorf("failed to ", args ...interface{})
+		// 	return err
+		// }
+		// previous, err := getPreviousDeps(r.Previous)
+		// if err != nil {
+		// 	return err
+		// }
+		// deps, err := parseDependencies(rd)
+		// if err != nil {
+		// 	return err
+		// }
+		// renameDependencies(previous, r.RenameDeps)
+		// updatedDeps := updatedDeps(previous, deps)
 
-		sort.Slice(updatedDeps, func(i, j int) bool {
-			return updatedDeps[i].Name < updatedDeps[j].Name
-		})
+		// sort.Slice(updatedDeps, func(i, j int) bool {
+		// 	return updatedDeps[i].Name < updatedDeps[j].Name
+		// })
 
-		if r.MatchDeps != "" && len(updatedDeps) > 0 {
-			re, err := regexp.Compile(r.MatchDeps)
-			if err != nil {
-				return errors.Wrap(err, "unable to compile 'match_deps' regexp")
-			}
-			td, err := ioutil.TempDir("", "tmp-clone-")
-			if err != nil {
-				return errors.Wrap(err, "unable to create temp clone directory")
-			}
-			defer os.RemoveAll(td)
+		// if r.MatchDeps != "" && len(updatedDeps) > 0 {
+		// 	re, err := regexp.Compile(r.MatchDeps)
+		// 	if err != nil {
+		// 		return errors.Wrap(err, "unable to compile 'match_deps' regexp")
+		// 	}
+		// 	td, err := ioutil.TempDir("", "tmp-clone-")
+		// 	if err != nil {
+		// 		return errors.Wrap(err, "unable to create temp clone directory")
+		// 	}
+		// 	defer os.RemoveAll(td)
 
-			cwd, err := os.Getwd()
-			if err != nil {
-				return errors.Wrap(err, "unable to get cwd")
-			}
-			for _, dep := range updatedDeps {
-				matches := re.FindStringSubmatch(dep.Name)
-				if matches == nil {
-					continue
-				}
-				logrus.Debugf("Matched dependency %s with %s", dep.Name, r.MatchDeps)
-				var name string
-				if len(matches) < 2 {
-					name = path.Base(dep.Name)
-				} else {
-					name = matches[1]
-				}
-				if err := os.Chdir(td); err != nil {
-					return errors.Wrap(err, "unable to chdir to temp clone directory")
-				}
-				git("clone", dep.CloneURL, name)
+		// 	cwd, err := os.Getwd()
+		// 	if err != nil {
+		// 		return errors.Wrap(err, "unable to get cwd")
+		// 	}
+		// 	for _, dep := range updatedDeps {
+		// 		matches := re.FindStringSubmatch(dep.Name)
+		// 		if matches == nil {
+		// 			continue
+		// 		}
+		// 		logrus.Debugf("Matched dependency %s with %s", dep.Name, r.MatchDeps)
+		// 		var name string
+		// 		if len(matches) < 2 {
+		// 			name = path.Base(dep.Name)
+		// 		} else {
+		// 			name = matches[1]
+		// 		}
+		// 		if err := os.Chdir(td); err != nil {
+		// 			return errors.Wrap(err, "unable to chdir to temp clone directory")
+		// 		}
+		// 		git("clone", dep.CloneURL, name)
 
-				if err := os.Chdir(name); err != nil {
-					return errors.Wrapf(err, "unable to chdir to cloned %s directory", name)
-				}
+		// 		if err := os.Chdir(name); err != nil {
+		// 			return errors.Wrapf(err, "unable to chdir to cloned %s directory", name)
+		// 		}
 
-				changes, err := changelog(dep.Previous, dep.Commit)
-				if err != nil {
-					return errors.Wrapf(err, "failed to get changelog for %s", name)
-				}
-				if err := addContributors(dep.Previous, dep.Commit, contributors); err != nil {
-					return errors.Wrapf(err, "failed to get authors for %s", name)
-				}
-				if linkify {
-					if !strings.HasPrefix(dep.Name, "github.com/") {
-						logrus.Debugf("linkify only supported for Github, skipping %s", dep.Name)
-					} else {
-						ghname := dep.Name[11:]
-						if err := linkifyChanges(changes, githubCommitLink(ghname), githubPRLink(ghname)); err != nil {
-							return err
-						}
-					}
-				}
+		// 		changes, err := changelog(dep.Previous, dep.Commit)
+		// 		if err != nil {
+		// 			return errors.Wrapf(err, "failed to get changelog for %s", name)
+		// 		}
+		// 		if err := addContributors(dep.Previous, dep.Commit, contributors); err != nil {
+		// 			return errors.Wrapf(err, "failed to get authors for %s", name)
+		// 		}
+		// 		if linkify {
+		// 			if !strings.HasPrefix(dep.Name, "github.com/") {
+		// 				logrus.Debugf("linkify only supported for Github, skipping %s", dep.Name)
+		// 			} else {
+		// 				ghname := dep.Name[11:]
+		// 				if err := linkifyChanges(changes, githubCommitLink(ghname), githubPRLink(ghname)); err != nil {
+		// 					return err
+		// 				}
+		// 			}
+		// 		}
 
-				projectChanges = append(projectChanges, projectChange{
-					Name:    name,
-					Changes: changes,
-				})
+		// 		projectChanges = append(projectChanges, projectChange{
+		// 			Name:    name,
+		// 			Changes: changes,
+		// 		})
 
-			}
-			if err := os.Chdir(cwd); err != nil {
-				return errors.Wrap(err, "unable to chdir to previous cwd")
-			}
-		}
+		// 	}
+		// 	if err := os.Chdir(cwd); err != nil {
+		// 		return errors.Wrap(err, "unable to chdir to previous cwd")
+		// 	}
+		// }
 
 		// update the release fields with generated data
 		r.Contributors = orderContributors(contributors)
-		r.Dependencies = updatedDeps
+		// r.Dependencies = updatedDeps
 		r.Changes = projectChanges
 		r.Tag = tag
 		r.Version = version

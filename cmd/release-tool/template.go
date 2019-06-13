@@ -27,8 +27,18 @@ Welcome to the {{.Tag}} release of {{.ProjectName}}!
 
 {{.Preface}}
 
-Please try out the release binaries and report any issues at
-https://github.com/{{.GithubRepo}}/issues.
+### Images
+---
+{{- if .SupernodeImage }}
+* Supernode Image Link: [supernode:{{.Version}}]({{.SupernodeImage}})
+{{- end}}
+{{- if .DfClientImage }}
+* Supernode Image Link: [dfclient:{{.Version}}]({{.DfClientImage}})
+{{- end}}
+
+### Breaking Changes
+---
+{{.BreakingChanges}}
 
 {{- range  $note := .Notes}}
 
@@ -38,6 +48,7 @@ https://github.com/{{.GithubRepo}}/issues.
 {{- end}}
 
 ### Contributors
+---
 {{range $contributor := .Contributors}}
 * {{$contributor}}
 {{- end -}}
@@ -48,13 +59,6 @@ https://github.com/{{.GithubRepo}}/issues.
 {{range $change := $project.Changes }}
 * {{$change.Commit}} {{$change.Description}}
 {{- end}}
-{{- end}}
-
-### Dependency Changes
-
-Previous release can be found at [{{.Previous}}](https://github.com/{{.GithubRepo}}/releases/tag/{{.Previous}})
-{{range $dep := .Dependencies}}
-* **{{$dep.Name}}**	{{if $dep.Previous}}{{$dep.Previous}} -> {{$dep.Commit}}{{else}}{{$dep.Commit}} **_new_**{{end}}
 {{- end}}
 `
 )

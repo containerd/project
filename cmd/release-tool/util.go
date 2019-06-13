@@ -98,6 +98,7 @@ func getPreviousDeps(previous string) ([]dependency, error) {
 func changelog(previous, commit string) ([]change, error) {
 	raw, err := getChangelog(previous, commit)
 	if err != nil {
+		logrus.Infof("failed to get change log previous(%s) commit(%s): %v", previous, commit, err)
 		return nil, err
 	}
 	return parseChangelog(raw)
