@@ -3,9 +3,17 @@
 Contributions should be made via pull requests. Pull requests will be reviewed
 by one or more maintainers and merged when acceptable.
 
-This project is in an early state, making the impact of contributions much
-greater than at other stages. In this respect, it is important to consider any
-changes or additions for their future impact more so than their current impact.
+The goal of the containerd project is to enable developers to build container
+platforms on top of the APIs that the containerd projects expose.
+The main entry point for a containerd consumer is the Go API. `ctr` is a
+development tool to quickly test features of containerd and is unsupported in
+a production setting. The project has zero plans of supporting `ctr` in the future.
+
+When developing features inside the containerd codebase, changes should be focused
+towards building APIs to develop higher level functionality and not about adding a
+specific feature into the core codebase.
+Some features may benefit the container ecosystem, however, they may not be
+appropriate for a first class feature in containerd.
 
 ## Successful Changes
 
