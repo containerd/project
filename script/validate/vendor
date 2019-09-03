@@ -18,7 +18,14 @@
 set -eu -o pipefail
 
 rm -rf vendor/
-vndr |& grep -v -i clone
+
+if [ "${GO111MODULE:-}" == 'on' ]; then
+    go mod init
+    go mod tidy
+    go mod vendor
+else
+    vndr |& grep -v -i clone
+fi
 
 DIFF_PATH="vendor/"
 DIFF=$(git status --porcelain -- "$DIFF_PATH")
