@@ -5,11 +5,9 @@ the containerd organization.
 
 ## release-tool utility
 
-The `release-tool` utility is maintained here in the common project repo
-to reduce duplication across the various release branches of the main
-`containerd/containerd` repository where it is used to cut release
-notes and project data to aid release engineers. It has the ability
-to be used by other projects as well.
+The `release-tool` utility, previously maintained here in the common
+project repository, has its own repository now. It is now located in
+the [`release-tool`](https://github.com/containerd/release-tool) repo.
 
 ## Common scripts
 
