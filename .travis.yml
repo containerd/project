@@ -2,17 +2,14 @@ language: go
 sudo: required
 
 go:
-  - 1.11.x
+  - 1.13.x
 
 go_import_path: github.com/containerd/project
 
 install:
   - go get -u github.com/vbatts/git-validation
   - go get -u github.com/kunalkushwaha/ltag
-  - go get -u github.com/LK4D4/vndr
 
 script:
   - DCO_VERBOSITY=-q script/validate/dco
   - script/validate/fileheader
-  - test -z $(git diff --name-only HEAD~1 | grep vendor) || script/validate/vendor
-  - test -z $(git diff --name-only HEAD~1 | grep -E 'cmd/release-tool|vendor') || go build -o release-tool github.com/containerd/project/cmd/release-tool
