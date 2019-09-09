@@ -18,7 +18,13 @@
 set -eu -o pipefail
 
 rm -rf vendor/
-vndr |& grep -v -i clone
+
+if [ -f vendor.conf ]; then
+  vndr |& grep -v -i clone
+else
+  go mod tidy
+  go mod vendor
+fi
 
 DIFF_PATH="vendor/"
 DIFF=$(git status --porcelain -- "$DIFF_PATH")
