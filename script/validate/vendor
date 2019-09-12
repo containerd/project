@@ -17,16 +17,18 @@
 
 set -eu -o pipefail
 
-rm -rf vendor/
-
 if [ -f vendor.conf ]; then
+  rm -rf vendor/
   vndr |& grep -v -i clone
 else
   go mod tidy
-  go mod vendor
+  if [ -f vendor ]; then
+    rm -rf vendor/
+    go mod vendor
+  fi
 fi
 
-DIFF_PATH="vendor/"
+DIFF_PATH="vendor/ go.mod go.sum"
 DIFF=$(git status --porcelain -- "$DIFF_PATH")
 
 if [ "$DIFF" ]; then
