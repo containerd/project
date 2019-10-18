@@ -52,3 +52,13 @@ As a containerd sub-project, you will find the:
 information in our [`containerd/project`](https://github.com/containerd/project) repository.
 ```
 
+### Non-core project documents
+
+If your project is a non-core addition to the containerd GitHub organization, please
+make the following changes to your project once approved and added:
+
+ * Clearly state in an opening sentence within your project `README.md` that "_Project X is
+ a **non-core** subproject of containerd_"
+ * Add the project details boilerplate provided above with the following two changes:
+   1. The first line should be modified to state: _{Some-project} is a **non-core** containerd subproject_
+   2. Do not link to the core `MAINTAINERS` file in `containerd/project`. That link should be modified to point to your existing non-core project `MAINTAINERS` file.

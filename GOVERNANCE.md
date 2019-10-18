@@ -61,18 +61,70 @@ maintainer has already discussed the candidacy with the candidate and a
 maintainer is willing to be a sponsor by opening the pull request. The candidate
 becomes a maintainer once the pull request is merged.
 
-## Adding sub-projects
+## Subprojects
 
-Similar to adding maintainers, new sub projects can be added to containerd
-GitHub organization as long as they adhere to the CNCF
-[charter](https://www.cncf.io/about/charter/) and mission. After a project
-proposal has been announced on a public forum (GitHub issue or mailing list),
-the existing maintainers are  given five business days to discuss the new
+containerd subprojects are divided into two flavors currently: **core** and
+**non-core**. Most of the repositories within the containerd GitHub organization are
+"core" to the delivery of the containerd runtime project's releases. For example,
+the Golang implementations of the cgroups, runc, and console APIs, the ttrpc
+implementation, and various built-in plugins like the CRI implementation. These, among a
+handful of other repositories, are all **core** and required pieces which culminate
+in officially supported and maintained releases of containerd.
+
+Non-core projects have a strong affiliation with the containerd runtime, but
+operate similarly to the traditional `contrib/` directory in many open source
+projects. In most cases the maintainer list will be unique and the project can
+have unique release, support, and maintainer processes. Non-core projects may be
+written in other languages and therefore require different skills, developer
+tools, and CI systems than the core projects. For these reasons, non-core
+subprojects have a few unique properties that are described in the section
+"_Adding non-core subprojects_" below.
+
+Both core and non-core subprojects must adhere to the CNCF
+[charter](https://www.cncf.io/about/charter/) and mission.
+
+### Adding core subprojects
+
+New core subprojects can request to be added to the containerd GitHub
+organization by submitting a project proposal via public forum (a
+`containerd/project` GitHub issue is the easiest way to provide this proposal).
+The existing maintainers are given five business days to discuss the new
 project, raise objections and cast their vote. Projects must be approved by at
-least 66% of the current maintainers by adding their vote.
+least 66% of the current maintainers.
 
 If a project is approved, a maintainer will add the project to the containerd
 GitHub organization, and make an announcement on a public forum.
+
+Please add the suggested text from our [Project core documents](./README.md#project-core-documents) section
+to your `README.md`.
+
+### Adding non-core subprojects
+
+Non-core subprojects will also submit a project proposal via public forum, and
+should state that the project is expected to be **non-core**.
+
+The proposal should include a proposed list of maintainers who will manage
+the non-core project and provide general information on support, releases,
+stability, and any additional detail useful for the containerd maintainers to
+understand the scope and nature of the project.
+
+The existing maintainers are given five business days to discuss the new
+project, raise objections and cast their vote. Projects must be approved by at
+least 66% of the current maintainers.
+
+If a project is approved, a core maintainer will add the project to the containerd
+GitHub organization and provide write access for that repository to the proposed
+maintainer list, as well as make an announcement on a public forum.
+
+Unlike core maintainers, non-core project maintainers are responsible for maintenance
+tasks in their subproject only. Core maintainers have maintainer privileges across
+all core and non-core projects to help contribute to project health, maintenance,
+and release processes within the GitHub organization. For ease of list management,
+the `MAINTAINERS` file of a non-core project will only list the non-core project
+maintainers—the core maintainers of containerd will not be appended to each subproject.
+
+Please add the suggested text from our [Non-core project documents](./README.md#non-core-project-documents)
+section to your `README.md`.
 
 ## Stepping down policy
 
@@ -151,6 +203,6 @@ made through a pull request.
 
 If you have a technical dispute that you feel has reached an impasse with a
 subset of the community, any contributor may open an issue, specifically
-calling for a resolution vote of the current maintainers to resolve the dispute.
+calling for a resolution vote of the current core maintainers to resolve the dispute.
 The same voting quorums required (2/3) for adding and removing maintainers
 will apply to conflict resolution.
