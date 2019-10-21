@@ -29,7 +29,11 @@ else
 fi
 
 DIFF_PATH="vendor/ go.mod go.sum"
-DIFF=$(git status --porcelain -- "$DIFF_PATH")
+
+# need word splitting here to avoid reading the whole DIFF_PATH as one pathspec
+#
+# shellcheck disable=SC2046
+DIFF=$(git status --porcelain -- $DIFF_PATH)
 
 if [ "$DIFF" ]; then
     echo
