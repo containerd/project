@@ -22,7 +22,7 @@ if [ -f vendor.conf ]; then
   vndr |& grep -v -i clone
 else
   go mod tidy
-  if [ -f vendor ]; then
+  if [ -d vendor ]; then
     rm -rf vendor/
     go mod vendor
   fi
