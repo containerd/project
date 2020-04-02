@@ -11,6 +11,7 @@ jobs:
   build:
     name: Project CI
     runs-on: ubuntu-18.04
+    timeout-minutes: 5
     steps:
 
     - name: Set up Go 1.13
