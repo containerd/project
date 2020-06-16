@@ -61,6 +61,35 @@ maintainer has already discussed the candidacy with the candidate and a
 maintainer is willing to be a sponsor by opening the pull request. The candidate
 becomes a maintainer once the pull request is merged.
 
+## Security Advisors
+
+A security advisor is an advisory role in the project responsible for helping
+classify and advise on embargoed security disclosures. Security advisors are
+individuals trusted by maintainers and representing significant users of the
+project.
+
+Security advisors are part of the organization without write access, but with
+read access to security disclosures and advisories before becoming public. There
+is no expectation of advisors to become reviewers or participate in issue
+triage and code review. Security advisors help maintain the integrity of the
+security review process and encourage responsible disclosure.
+
+A reviewer may also be a security advisor, however, maintainers do not need this
+role as it is part of regular maintainer duties. The security advisor duties are
+not part of the duties of being a reviewer.
+
+Candidates should contact a maintainer and request sponsorship for becoming a
+security advisor. Once a maintainer is willing to sponsor a candidate, the
+maintainer will open up a pull request to the SECURITY_ADVISORS files adding
+the candidate. Since it is not expected that candidates are active in the
+project, there is no expectation that they are well known by a majority of
+maintainers. Approving the pull request requires a two LGTM threshold of
+maintainers.
+
+Security advisors may be removed by the same sponsoring maintainer with a two
+LGTM threshold or by any other maintainer with approval of 33% of current
+maintainers.
+
 ## Subprojects
 
 containerd subprojects are divided into two flavors currently: **core** and
