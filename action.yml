@@ -1,3 +1,36 @@
+#   Copyright The containerd Authors.
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#       http://www.apache.org/licenses/LICENSE-2.0
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+#
+# containerd project checks Github CI Action.
+#
+# Example:
+#
+# jobs:
+#  project:
+#    name: Project Checks
+#    runs-on: ubuntu-18.04
+#    timeout-minutes: 5
+#
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          path: src/github.com/containerd/containerd
+#          fetch-depth: 100
+#
+#      - name: Project checks
+#        uses: containerd/project@v1
+#        with:
+#          working-directory: src/github.com/containerd/containerd
+#
 name: Project Checks
 description: Project checks commonly used across containerd org
 inputs:
@@ -29,7 +62,7 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       env:
         GITHUB_COMMIT_URL: ${{ github.event.pull_request.commits_url }}
-        DCO_VERBOSITY: "-q"
+        DCO_VERBOSITY: "-v"
         DCO_RANGE: ""
       run: |
         echo "::group::👮 DCO checks"
