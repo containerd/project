@@ -17,6 +17,7 @@
 "yujuhong","Yu-Ju Hong","yjhong@google.com"
 "fuweid","Wei Fu","yuge.fw@alibaba-inc.com"
 "mxpv","Maksym Pavlenko","pavlenko.maksym@gmail.com"
+"dims", "Davanum Srinivas","davanum@gmail.com"
 #
 # REVIEWERS
 # GitHub ID, Name, Email address
@@ -30,7 +31,6 @@
 "cpuguy83","Brian Goff","cpuguy83@gmail.com"
 "thajeztah","Sebastiaan van Stijn","github@gone.nl"
 "Zyqsempai","Boris Popovschi","zyqsempai@mail.ru"
-"dims", "Davanum Srinivas","davanum@gmail.com"
 "kzys", "Kazuyoshi Kato", "katokazu@amazon.com"
 "kevpar", "Kevin Parsons", "kevpar@microsoft.com"
 "ktock", "Kohei Tokunaga", "ktokunaga.mail@gmail.com"
