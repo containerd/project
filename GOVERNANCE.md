@@ -23,12 +23,23 @@ project from a great one.
 
 ## Reviewers
 
-A reviewer is a core role within the project.
+A reviewer is a core maintainer within the project.
 They share in reviewing issues and pull requests and their LGTM counts towards the
 required LGTM count to merge a code change into the project.
 
 Reviewers are part of the organization but do not have write access.
-Becoming a reviewer is a core aspect in the journey to becoming a maintainer.
+Becoming a reviewer is a core aspect in the journey to becoming a committer.
+
+## Committers
+
+A committer is a core maintainer who is responsible for the overall quality and
+stewardship of the project. They share the same reviewing responsibilities as
+reviewers, but are also responsible for upholding the project bylaws as well as
+participating in project level votes.
+
+Committers are part of the organization with write access to all repositories.
+Committers are expected to remain actively involved in the project and
+participate in voting and discussing of proposed project level changes.
 
 ## Adding maintainers
 
@@ -43,23 +54,24 @@ depend on and trust to make decisions in the best interest of the project.
 
 Periodically, the existing maintainers curate a list of contributors that have
 shown regular activity on the project over the prior months. From this list,
-maintainer candidates are selected and proposed on the maintainers mailing list.
+maintainer candidates are selected and proposed in the maintainers forum.
 
-After a candidate has been announced on the maintainers mailing list, the
-existing maintainers are given five business days to discuss the candidate,
-raise objections and cast their vote. Votes may take place on the mailing list
-or via pull request comment. Candidates must be approved by at least 66% of the
-current maintainers by adding their vote on the mailing list. The reviewer role
-has the same process but only requires 33% of current maintainers. Only
-maintainers of the repository that the candidate is proposed for are allowed to
-vote.
+After a candidate has been informally proposed in the maintainers forum, the
+existing maintainers are given seven days to discuss the candidate, raise
+objections and show their support. Formal voting takes place on a pull request
+that adds the contributor to the MAINTAINERS file. Candidates must be approved
+by 2/3 of the current committers by adding their approval or LGTM to the pull
+request. The reviewer role has the same process but only requires 1/3 of current
+committers.
 
-If a candidate is approved, a maintainer will contact the candidate to invite
-the candidate to open a pull request that adds the contributor to the
-MAINTAINERS file. The voting process may take place inside a pull request if a
-maintainer has already discussed the candidacy with the candidate and a
-maintainer is willing to be a sponsor by opening the pull request. The candidate
-becomes a maintainer once the pull request is merged.
+If a candidate is approved, they will be invited to add their own LGTM or
+approval to the pull request to acknowledge their agreement. A committer will
+verify the numbers of votes that have been received and the allotted seven days
+have passed, then merge the pull request and invite the contributor to the
+organization.
+
+For non-core sub-projects, only committers of the repository that the candidate
+is proposed for are given votes.
 
 ## Security Advisors
 
@@ -74,8 +86,8 @@ is no expectation of advisors to become reviewers or participate in issue
 triage and code review. Security advisors help maintain the integrity of the
 security review process and encourage responsible disclosure.
 
-A reviewer may also be a security advisor, however, maintainers do not need this
-role as it is part of regular maintainer duties. The security advisor duties are
+A reviewer may also be a security advisor, however, committers do not need this
+role as it is part of their regular duties. The security advisor duties are
 not part of the duties of being a reviewer.
 
 Candidates should contact a maintainer and request sponsorship for becoming a
@@ -84,11 +96,12 @@ maintainer will open up a pull request to the SECURITY_ADVISORS files adding
 the candidate. Since it is not expected that candidates are active in the
 project, there is no expectation that they are well known by a majority of
 maintainers. Approving the pull request requires a two LGTM threshold of
-maintainers.
+committers. A reviewer may sponsor themselves, but still require the same two
+LGTM threshold of committers.
 
 Security advisors may be removed by the same sponsoring maintainer with a two
-LGTM threshold or by any other maintainer with approval of 33% of current
-maintainers.
+LGTM threshold or by any other maintainer with approval of 1/3 of current
+committers.
 
 ## Subprojects
 
@@ -117,9 +130,9 @@ Both core and non-core subprojects must adhere to the CNCF
 New core subprojects can request to be added to the containerd GitHub
 organization by submitting a project proposal via public forum (a
 `containerd/project` GitHub issue is the easiest way to provide this proposal).
-The existing maintainers are given five business days to discuss the new
-project, raise objections and cast their vote. Projects must be approved by at
-least 66% of the current maintainers.
+The existing maintainers are given seven days to discuss the new project, raise
+objections and cast their vote. Projects must be approved by 2/3 of the current
+core committers.
 
 If a project is approved, a maintainer will add the project to the containerd
 GitHub organization, and make an announcement on a public forum.
@@ -137,9 +150,9 @@ the non-core project and provide general information on support, releases,
 stability, and any additional detail useful for the containerd maintainers to
 understand the scope and nature of the project.
 
-The existing maintainers are given five business days to discuss the new
-project, raise objections and cast their vote. Projects must be approved by at
-least 66% of the current maintainers.
+The existing maintainers are given seven days to discuss the new project, raise
+objections and cast their vote. Projects must be approved by 2/3 of the current
+core committers.
 
 If a project is approved, a core maintainer will add the project to the containerd
 GitHub organization and provide write access for that repository to the proposed
@@ -170,20 +183,23 @@ yourself from the MAINTAINERS file.
 Similar to the procedure for adding new maintainers, existing maintainers can
 be removed from the list if they do not show significant activity on the
 project. Periodically, the maintainers review the list of maintainers and their
-activity over the last three months.
+activity over the last year.
 
 If a maintainer has shown insufficient activity over this period, a neutral
 person will contact the maintainer to ask if they want to continue being
 a maintainer. If the maintainer decides to step down as a maintainer, they
 open a pull request to be removed from the MAINTAINERS file.
 
-If the maintainer wants to remain a maintainer, but is unable to perform the
-required duties they can be removed with a vote of at least 66% of
-the current maintainers. An e-mail is sent to the
-mailing list, inviting maintainers of the project to vote. The voting period is
-five business days. Issues related to a maintainer's performance should be
-discussed with them among the other maintainers so that they are not surprised
-by a pull request removing them.
+If a committer is unable to continue participating in project level votes but
+wishes to remain a maintainer on the project, they may convert their role to
+a reviewer until they are able to perform committer duties again.
+
+If an inactive maintainer wants to remain in their current role or does not open
+their own pull request to change roles, another maintainer may open up a pull
+request to the MAINTAINERS file to change their role. Role changes and removals
+must be approved by 2/3 of the current committers. The voting and discussion
+period is seven days, after which a committer will verify the votes,
+merge the pull request, and apply the changes to the organization.
 
 ## How are decisions made?
 
@@ -232,6 +248,6 @@ made through a pull request.
 
 If you have a technical dispute that you feel has reached an impasse with a
 subset of the community, any contributor may open an issue, specifically
-calling for a resolution vote of the current core maintainers to resolve the dispute.
-The same voting quorums required (2/3) for adding and removing maintainers
-will apply to conflict resolution.
+calling for a resolution vote of the current core committers to resolve the
+dispute. A resolution vote must be approved by 2/3 of the current core
+committers.
