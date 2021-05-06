@@ -241,7 +241,7 @@ When you add someone's DCO, please also add your own to keep a log.
 
 ## I'm a maintainer. Should I make pull requests too?
 
-Yes. Nobody should ever push to master directly. All changes should be
+Yes. Nobody should ever push to main directly. All changes should be
 made through a pull request.
 
 ## Conflict Resolution
