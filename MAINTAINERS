@@ -8,7 +8,6 @@
 "crosbymichael","Michael Crosby","crosbymichael@gmail.com"
 "dmcgowan","Derek McGowan","derek@mcgstyle.net"
 "estesp","Phil Estes","estesp@gmail.com"
-"jterry75","Justin Terry","juterry@microsoft.com"
 "mlaventure","Kenfe-Mickaël Laventure","mickael.laventure@gmail.com"
 "stevvooe","Stephen Day","stevvooe@gmail.com"
 "dchen1107","Dawn Chen","dawnchen@google.com"
@@ -18,9 +17,11 @@
 "fuweid","Fu Wei","fuweid89@gmail.com"
 "mxpv","Maksym Pavlenko","pavlenko.maksym@gmail.com"
 "dims","Davanum Srinivas","davanum@gmail.com"
+"kevpar","Kevin Parsons","kevpar@microsoft.com"
 #
 # REVIEWERS
 # GitHub ID, Name, Email address
+"jterry75","Justin Terry","juterry@microsoft.com"
 "abhi","Abhinandan Prativadi","aprativadi@gmail.com"
 "dqminh","Daniel, Dao Quang Minh","dqminh89@gmail.com"
 "hqhq","Qiang Huang","h.huangqiang@huawei.com"
@@ -32,6 +33,5 @@
 "thajeztah","Sebastiaan van Stijn","github@gone.nl"
 "Zyqsempai","Boris Popovschi","zyqsempai@mail.ru"
 "kzys","Kazuyoshi Kato","katokazu@amazon.com"
-"kevpar","Kevin Parsons","kevpar@microsoft.com"
 "ktock","Kohei Tokunaga","ktokunaga.mail@gmail.com"
 "samuelkarp","Samuel Karp","skarp@amazon.com"
