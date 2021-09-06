@@ -37,13 +37,13 @@ using the same security mailing list as for reporting vulnerabilities.
 
 ## Joining the security announce mailing list
 
-Any organization or individual who directly uses containerd in production or in
-a security critical application is eligible to join the security announce
-mailing list. Indirect users who use containerd through a vendor are not
-expected to join, but should request their vendor join. To join the mailing
-list, the individual or organization must be sponsored by either a containerd
-maintainer or security advisor as well as have a record of properly handling
-non-public security information. If a sponsor cannot be found, sponsorship may
-be requested at `security@containerd.io`. Sponsorship should not be requested
-via public channels since membership of the security announce list is not
-public.
+Any organization or individual who directly uses containerd and non-core
+packages in production or in a security critical application is eligible to join
+the security announce mailing list. Indirect users who use containerd through a
+vendor are not expected to join, but should request their vendor join. To join
+the mailing list, the individual or organization must be sponsored by either a
+containerd maintainer or security advisor as well as have a record of properly
+handling non-public security information. If a sponsor cannot be found,
+sponsorship may be requested at `security@containerd.io`. Sponsorship should not
+be requested via public channels since membership of the security announce list
+is not public.
