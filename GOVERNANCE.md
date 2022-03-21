@@ -168,6 +168,28 @@ maintainers—the core maintainers of containerd will not be appended to each su
 Please add the suggested text from our [Non-core project documents](./README.md#non-core-project-documents)
 section to your `README.md`.
 
+### Changing the status of non-core subprojects
+
+A change of status of a non-core subproject can be made by submitting a change of
+status proposal via public forum. The types of changes may include:
+- promoting a non-core subproject to core
+- removing/archiving the non-core subproject
+- merging into another project
+
+The proposal should include some general information on support, releases,
+stability, downstream impacts, steps necessary to effect the change, and any
+additional detail useful for the containerd maintainers to understand the scope and
+nature of the project status change. GitHub issue is the easiest way to provide
+this proposal.
+
+The existing maintainers are given fourteen days to discuss the project change,
+raise objections and cast their vote. Project changes of this type must be approved
+by 2/3 of the current core committers.
+
+If a change of status of the non-core subproject is approved, the maintainers will
+set forth a schedule for notifying downstream project users, implementing the change
+and finally making an announcement on a public forum when the change is complete.
+
 ## Stepping down policy
 
 Life priorities, interests, and passions can change. If you're a maintainer but
