@@ -1,4 +1,7 @@
 # containerd common project repository
+
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/containerd/project/badge)](https://api.securityscorecards.dev/projects/github.com/containerd/project)
+
 This cross-project repository holds utilities, scripts, and common files
 used across the containerd core projects and many sub-projects within
 the containerd organization.
