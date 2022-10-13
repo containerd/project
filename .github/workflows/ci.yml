@@ -10,14 +10,14 @@ jobs:
 
   build:
     name: Project CI
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 5
     steps:
 
-    - name: Set up Go 1.13
-      uses: actions/setup-go@v1
+    - name: Set up Go 1.19
+      uses: actions/setup-go@v2
       with:
-        go-version: 1.13
+        go-version: 1.19
       id: go
 
     - name: Setup Go binary path
@@ -34,10 +34,10 @@ jobs:
 
     - name: Install dependencies
       env:
-        GO111MODULE: off
+        GO111MODULE: on
       run: |
-        go get -u github.com/vbatts/git-validation
-        go get -u github.com/kunalkushwaha/ltag
+        go install github.com/vbatts/git-validation@latest
+        go install github.com/kunalkushwaha/ltag@latest
 
     - name: Check DCO/whitespace/commit message
       env:
