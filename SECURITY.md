@@ -2,11 +2,25 @@
 
 ## Reporting a Vulnerability
 
-To report a containerd vulnerability, send an email to `security@containerd.io`
-detailing the issue and steps to reproduce. The reporter(s) can expect a
-response within 24 hours acknowledging the issue was received. If a response is
-not received within 24 hours, please reach out to any committer directly
-to confirm receipt of the issue.
+To report a containerd vulnerability, either:
+
+1. Report it on Github directly:
+
+    Navigate to the security tab on the repository
+    ![Github Security Tab](./img/Security-Tab.png)
+
+    Click on 'Advisories'
+    ![Github Advisories tab](./img/Advisories.png)
+
+    Click on 'Report a vulnerability'
+    ![Report a vulnerability](./img/Report-A-Vulnerability.png)
+
+2. Send an email to `security@containerd.io` detailing the issue and steps
+to reproduce.
+
+The reporter(s) can expect a response within 24 hours acknowledging
+the issue was received. If a response is not received within 24 hours, please
+reach out to any committer directly to confirm receipt of the issue.
 
 ## Review Process
 
