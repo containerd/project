@@ -184,7 +184,9 @@ this proposal.
 
 The existing maintainers are given fourteen days to discuss the project change,
 raise objections and cast their vote. Project changes of this type must be approved
-by 2/3 of the current core committers.
+by 2/3 of the current core committers and core committers are encouraged to consider the opinions and objections of the existing non-core project maintainers.
+
+Project status changes do not automatically change the status of any non-core project maintainers.  Project status change proposals may be accompanied by additional proposals to change individual maintainer status, subject to the existing rules set forth in this document.
 
 If a change of status of the non-core subproject is approved, the maintainers will
 set forth a schedule for notifying downstream project users, implementing the change
