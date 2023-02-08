@@ -68,6 +68,12 @@ each commit tells the story. For example, if there is a feature that requires a
 package, it might make sense to have the package in a separate commit then have
 a subsequent commit that uses it.
 
+If there are multiple authors who worked together on a PR that needs to be squashed,
+please use `Co-authored-by` to indicate each person who contributed to the PR. This
+enables automated tools
+and [Github](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors)
+to highlight everyone's role in the PR.
+
 Remember, you're telling part of the story with the commit message. Don't make
 your chapter weird.
 
