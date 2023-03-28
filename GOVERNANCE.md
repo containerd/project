@@ -178,28 +178,61 @@ At the very least, ensure your work can be continued where you left off.
 After you've informed other maintainers, create a pull request to remove
 yourself from the MAINTAINERS file.
 
-## Removal of inactive maintainers
+## Handling inactive maintainers
 
 Similar to the procedure for adding new maintainers, existing maintainers can
-be removed from the list if they do not show significant activity on the
-project. Periodically, the maintainers review the list of maintainers and their
-activity over the last year.
+be removed from the list if they do not show consistent activity on the
+project. Depending on the existing role, committer or reviewer, there are
+variations to the inactivity process detailed as follows.
 
-If a maintainer has shown insufficient activity over this period, a neutral
-person will contact the maintainer to ask if they want to continue being
-a maintainer. If the maintainer decides to step down as a maintainer, they
-open a pull request to be removed from the MAINTAINERS file.
+### Committer inactivity process
 
-If a committer is unable to continue participating in project level votes but
-wishes to remain a maintainer on the project, they may convert their role to
-a reviewer until they are able to perform committer duties again.
+For committers, the maintainers periodically review committer project
+activity. The maintainers use the CNCF "devstats" community metrics tool for
+data on user activity statistics.
 
-If an inactive maintainer wants to remain in their current role or does not open
-their own pull request to change roles, another maintainer may open up a pull
-request to the MAINTAINERS file to change their role. Role changes and removals
-must be approved by 2/3 of the current committers. The voting and discussion
-period is seven days, after which a committer will verify the votes,
-merge the pull request, and apply the changes to the organization.
+If a committer has shown no activity over a six-month period, the committer
+will be contacted to notify them of their activity status and offer a move to
+an Emeritus role. There is no automatic change of status in the project. First,
+the activity status is discussed directly with the committer, and second,
+maintainers discuss whether other non-tracked contributions to the project
+reflect an ongoing, active participation in the project.
+
+Based on the outcome of these discussions, the committer may choose to remove
+themselves from the MAINTAINERS file, as noted above in the "Stepping down
+policy" section. If another maintainer opens a pull request to the MAINTAINERS
+file on their behalf for removal, the PR must be approved by 2/3 of the current
+committers, or by the committer who is being removed. The voting and discussion
+period is seven days, after which a committer will verify the votes, merge the
+pull request, and apply the changes to the organization.
+
+### Reviewer inactivity process
+
+While reviewers are not voting members of the containerd project, the maintainers
+may assess reviewer activity periodically and recommend removals for any
+completely inactive reviewers.
+
+Reviewers may remove themselves from the MAINTAINERS file if they wish to or
+any existing maintainer may open a pull request to the MAINTAINERS file on their
+behalf. If the pull request is not initiated by the reviewer, it must be approved
+by 2/3 of the current committers or by the reviewer who is being removed. The
+voting and discussion period is seven days, after which a committer will verify
+the votes, merge the pull request, and apply the changes to the organization.
+
+## Emeritus maintainers
+
+For committers who are stepping down or being removed due to inactivity,
+the project would like to memorialize their contributions to the project by
+recognizing them as Emeritus maintainers in the EMERITUS.md file. The EMERITUS.md
+file will include a brief paragraph summarizing their contribution to the
+containerd project and recognize them as permanent Emeritus members of the
+community.
+
+If in the future an Emeritus maintainer has the desire or ability to return to
+contributing to the project, Emeritus maintainers can submit a pull request
+reversing their removal from the MAINTAINERS file and approval only requires
+2 LGTMs from current committers to return to full committer status in the
+project.
 
 ## How are decisions made?
 
