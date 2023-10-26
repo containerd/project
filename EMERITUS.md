@@ -27,3 +27,14 @@ Kubernetes providers, which would not have been possible without Lantao's
 dedicated work.  While Lantao is no longer involved in the day-to-day
 maintenance of the CRI plugin or containerd in general, he remains involved in
 the larger Kubernetes community.
+
+## Dawn Chen [@dchen1107](https://github.com/dchen1107)
+
+Dawn Chen was the initiator of CRI for Kubernetes, and an important partner in
+enabling the containerd CRI plugin to happen.  Dawn coordinated the needs of
+Kubernetes SIG-Node with containerd.  containerd is now well-supported and a
+critical part of Kubernetes validation, which would not have been possible
+without Dawn’s advocacy.  While Dawn is no longer involved in the day-to-day
+maintenance of the CRI plugin or containerd in general, she continues to serve
+as a Technical Lead for SIG-Node and an advocate for containerd in the
+Kubernetes community.
