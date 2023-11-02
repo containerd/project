@@ -47,3 +47,12 @@ invoke runtimes via CRI, allowed the Kubernetes CI environment to test CRI
 integrations like containerd, and provided a standard set of tools and test
 suite for container runtimes.  While Yu-Ju is not currently involved in
 containerd, she remains involved in the larger Kubernetes community.
+
+## Stephen Day [@stevvooe](https://github.com/stevvooe)
+
+Both the author of the initial distribution specification and architect behind
+many of the containerd 1.0 designs, Stephen Day has had a tremendous impact on
+the container ecosystem. The containerd project has greatly benefited from
+Stephen’s bold and innovative ideas along with his large impact on the
+containerd codebase. We can both thank and `git blame` Stephen for many parts of
+containerd.
