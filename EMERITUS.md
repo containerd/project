@@ -38,3 +38,12 @@ without Dawn’s advocacy.  While Dawn is no longer involved in the day-to-day
 maintenance of the CRI plugin or containerd in general, she continues to serve
 as a Technical Lead for SIG-Node and an advocate for containerd in the
 Kubernetes community.
+
+## Yu-Ju Hong [@yujuhong](https://github.com/yujuhong)
+
+Yu-Ju Hong proposed the first version of CRI and was a key part of early
+implementation of the containerd CRI plugin.  Her work enabled Kubernetes to
+invoke runtimes via CRI, allowed the Kubernetes CI environment to test CRI
+integrations like containerd, and provided a standard set of tools and test
+suite for container runtimes.  While Yu-Ju is not currently involved in
+containerd, she remains involved in the larger Kubernetes community.
