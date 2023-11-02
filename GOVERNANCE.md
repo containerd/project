@@ -226,7 +226,9 @@ the project would like to memorialize their contributions to the project by
 recognizing them as Emeritus maintainers in the EMERITUS.md file. The EMERITUS.md
 file will include a brief paragraph summarizing their contribution to the
 containerd project and recognize them as permanent Emeritus members of the
-community.
+community. While Emeritus maintainers are not active in the project, their
+expertise is always valued and their LGTM may count towards the required LGTM
+count to merge a code change into the project.
 
 If in the future an Emeritus maintainer has the desire or ability to return to
 contributing to the project, Emeritus maintainers can submit a pull request
