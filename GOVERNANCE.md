@@ -280,6 +280,8 @@ All decisions affecting containerd, big and small, follow the same 3 steps:
 
 * Step 3: Merge or refuse the pull request. Who does this depends on the nature
 of the pull request and which areas of the project it affects.
+A pull request that contains potential breaking changes should be kept open for
+seven days at least.
 
 ## Helping contributors with the DCO
 
