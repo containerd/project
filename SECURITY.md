@@ -2,21 +2,16 @@
 
 ## Reporting a Vulnerability
 
-To report a containerd vulnerability, either:
+To report a containerd vulnerability:
 
-1. Report it on Github directly:
+* Navigate to the security tab on the repository
+![Github Security Tab](./img/Security-Tab.png)
 
-    Navigate to the security tab on the repository
-    ![Github Security Tab](./img/Security-Tab.png)
+* Click on `Advisories`
+![Github Advisories tab](./img/Advisories.png)
 
-    Click on 'Advisories'
-    ![Github Advisories tab](./img/Advisories.png)
-
-    Click on 'Report a vulnerability'
-    ![Report a vulnerability](./img/Report-A-Vulnerability.png)
-
-2. Send an email to `security@containerd.io` detailing the issue and steps
-to reproduce.
+* Click on `Report a vulnerability`
+![Report a vulnerability](./img/Report-A-Vulnerability.png)
 
 The reporter(s) can expect a response within 24 hours acknowledging
 the issue was received. If a response is not received within 24 hours, please
@@ -57,7 +52,6 @@ the security announce mailing list. Indirect users who use containerd through a
 vendor are not expected to join, but should request their vendor join. To join
 the mailing list, the individual or organization must be sponsored by either a
 containerd committer or security advisor as well as have a record of properly
-handling non-public security information. If a sponsor cannot be found,
-sponsorship may be requested at `security@containerd.io`. Sponsorship should not
-be requested via public channels since membership of the security announce list
-is not public.
+handling non-public security information.
+Sponsorship should not be requested via public channels since membership of the
+security announce list is not public.
