@@ -281,6 +281,19 @@ All decisions affecting containerd, big and small, follow the same 3 steps:
 * Step 3: Merge or refuse the pull request. Who does this depends on the nature
 of the pull request and which areas of the project it affects.
 
+
+## Breaking changes (backward/forward)
+
+A breaking change is a modification to a supported feature of a public service or API that breaks with prior releases (backwards) and in some cases future releases (forwards.. both potential or real).
+
+I. Backwards - If it is necessary to consider a breaking change, effort will be made to:
+   a. get input from impacted parties
+   b. provide proper notice and workarounds
+   c. avoid cherry picking the change to supported releases
+   d. restrict breaking changes to the main branch targeted for a next major release boundary
+
+II. Forwards - When drafting a public service/api care should be taken to keep the API free from overly restrictive content checking that would easily break in the future if for example, an additional field is added, in the future, to a passed in data structure. IOW consideration should be made to be future proof as these apis may be hosted by old containerd binaries for many years, even called by newer versions of clients where a user did not move to the latest containerd but did upgrade the client.
+
 ## Helping contributors with the DCO
 
 The [DCO or `Sign your work`](./CONTRIBUTING.md#sign-your-work)
