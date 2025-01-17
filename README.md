@@ -1,30 +1,24 @@
 # containerd common project repository
-This cross-project repository holds utilities, scripts, and common files
-used across the containerd core projects and many sub-projects within
-the containerd organization.
+This `project` repository contains the governance definitions and specified project
+roles like maintainers and security advisors.
 
-## release-tool utility
+## Scripts and utilities
 
-The `release-tool` utility, previously maintained here in the common
-project repository, has its own repository now. It is now located in
-the [`release-tool`](https://github.com/containerd/release-tool) repo.
+Originally, this repository held common CI scripts/checks as well as the
+`release-tool`. Neither of those items are maintained in this repository.
+See the below paragraphs for their new locations:
 
-## Common scripts
+### The release-tool utility
 
-To reduce the need for several copies of tools which perform DCO checks,
-file license header checks, and Go vendor compliance, a set of scripts
-is maintained here and used within the CI configuration of various
-projects within the containerd organization.
+The `release-tool` now has its own repository. It is located in
+the [`release-tool`](https://github.com/containerd/release-tool) subproject.
 
-The simplest way to see the integration of this common project into a
-Travis CI configuration is to look at the example in the
-[`containerd/continuity` project here](https://github.com/containerd/continuity/blob/f192d1bf54e8c62a567bd5af21b2bedbb3e8c6d7/.travis.yml#L18-L30).
+### Common CI checks/scripts
 
-Common tools are retrieved during `install:` with `go get`, and then
-this `containerd/project` repository is cloned in the `before_script:`.
-Finally, tools from the `project` repository are then used for checking
-DCO signoff, license file headers, and vendoring matching between the
-commit and vendor config file.
+After migrating the entire project and all sub-projects to GitHub
+Actions for CI, we made a subproject repo that contains a common `project-checks`
+action with our file header, DCO, and vendor checks. That repository is
+located in [`project-checks`](https://github.com/containerd/project-checks)
 
 ## Project core documents
 
