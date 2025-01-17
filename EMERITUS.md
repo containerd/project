@@ -56,3 +56,9 @@ the container ecosystem. The containerd project has greatly benefited from
 Stephen’s bold and innovative ideas along with his large impact on the
 containerd codebase. We can both thank and `git blame` Stephen for many parts of
 containerd.
+
+## Kevin Parsons [@kevpar](https://github.com/kevpar)
+
+Leading the development of Windows support in containerd has never been an easy
+task. Kevin has done a great job at both getting the Windows support in a good
+shape and bringing in new Windows contributors to continue to effort.
