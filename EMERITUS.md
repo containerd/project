@@ -62,3 +62,12 @@ containerd.
 Leading the development of Windows support in containerd has never been an easy
 task. Kevin has done a great job at both getting the Windows support in a good
 shape and bringing in new Windows contributors to continue to effort.
+
+## Michael Crosby [@crosbymichael](https://github.com/crosbymichael)
+
+Michael played a foundational role in the creation and growth of the containerd project.
+In the early days of containerd, he architected it with a focus on simplicity, robustness,
+and extensibility - principles that continue to define the project today. Michael's
+fingerprints are all over the container ecosystem from the early days of Docker to
+libcontainer into runc. We are incredibly proud to have worked alongside him and for the
+huge amount of heart and soul he poured into the project to make it the success it is today.
