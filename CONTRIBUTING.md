@@ -81,7 +81,7 @@ your chapter weird.
 
 If you submit a contribution that adds a new file, please add the license
 header. You can do so manually or use the `ltag` tool. The `ltag` templates
-for filetypes are in the `containerd/project` repository but the files you want
+for filetypes are in the `containerd/project-checks` repository but the files you want
 to tag are most likely in the main containerd project or any of the possible
 subprojects. You can pass the path to the project repo root to `ltag` but you
 should run `ltag` in the directory where you have new files.
@@ -89,7 +89,7 @@ should run `ltag` in the directory where you have new files.
 
 ```console
 $ go get github.com/kunalkushwaha/ltag
-$ ltag -t {containerd/project rootdir}/script/validate/template
+$ ltag -t {containerd/project-checks rootdir}/script/validate/template
 ```
 
 The above will add the appropriate license header to Go language source files,
