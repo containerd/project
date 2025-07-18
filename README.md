@@ -46,6 +46,9 @@ As a containerd sub-project, you will find the:
 information in our [`containerd/project`](https://github.com/containerd/project) repository.
 ```
 
+If the project has its own `MAINTAINERS` file, that file should contain a comment with a link to
+the core `MAINTAINERS` file in `containerd/project` and mention it as additional maintainers.
+
 ### Non-core project documents
 
 If your project is a non-core addition to the containerd GitHub organization, please
