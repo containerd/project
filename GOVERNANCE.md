@@ -137,6 +137,12 @@ core committers.
 If a project is approved, a maintainer will add the project to the containerd
 GitHub organization, and make an announcement on a public forum.
 
+Core projects may have a separate maintainers list which are responsible for
+only maintaining their subproject. The `MAINTAINERS` file of a core subproject
+will only need to list the additional maintainers for that subproject-the core
+maintainers will also be responsible for maintenance but do not need to be
+appended to each subproject.
+
 Please add the suggested text from our [Project core documents](./README.md#project-core-documents) section
 to your `README.md`.
 
