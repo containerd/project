@@ -12,8 +12,8 @@ a production setting. The project has zero plans of supporting `ctr` in the futu
 When developing features inside the containerd codebase, changes should be focused
 towards building APIs to develop higher level functionality and not about adding a
 specific feature into the core codebase.
-Some features may benefit the container ecosystem, however, they may not be
-appropriate for a first class feature in containerd.
+Even functionality that benefits the broader container ecosystem may not be
+appropriate to implement as a first class feature in containerd.
 
 ## Successful Changes
 
