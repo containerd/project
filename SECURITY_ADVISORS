@@ -4,7 +4,6 @@
 #
 # SECURITY ADVISORS
 # GitHub ID, Name, Email address, Company
-"justincormack","Justin Cormack","justin.cormack@docker.com","Docker"
 "rtheis","Richard Theis","rtheis@us.ibm.com","IBM"
 "ralphbuk","Ralph Bateman","ralph@uk.ibm.com","IBM"
 "SergeyKanzhelev","Sergey Kanzhelev","skanzhelev@google.com","Google"
@@ -18,3 +17,4 @@
 "wordsalad","Ross Uhrich","uhr@google.com","Google"
 "cpuguy83", "Brian Goff", "cpuguy83@gmail.com", "Microsoft"
 "chrishenzie","Chris Henzie","chrishenzie@gmail.com","Google"
+"thajeztah","Sebastiaan van Stijn","github@gone.nl","Docker"
